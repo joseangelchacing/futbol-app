@@ -43,4 +43,5 @@ export class SelectorLigas implements OnInit {
     const mostRecent = Math.max(...seasons);
     this.router.navigate(['/equipos', liga.league.id, mostRecent]);
   }
+  
 } 
