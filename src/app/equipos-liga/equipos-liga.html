@@ -1,0 +1,21 @@
+<div class="main-content">
+  <h2>{{ leagueName }}</h2>
+  <label for="season">Selecciona el año:</label>
+  <select id="season" (change)="onSeasonChange($event)" [value]="selectedSeason()">
+    <option *ngFor="let year of seasons()" [value]="year">{{ year }}</option>
+  </select>
+
+  <div *ngIf="equipos().length > 0">
+    <h3>Equipos</h3>
+    <ul>
+      <li *ngFor="let equipo of equipos()">
+        <img [src]="equipo.team.logo" alt="logo" width="32" height="32" style="vertical-align:middle; margin-right:8px;">
+        {{ equipo.team.name }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="equipos().length === 0">
+    <p>No hay equipos para esta liga y año.</p>
+  </div>
+  <button style="margin-top:2em;" (click)="volver()">Volver</button>
+</div> 

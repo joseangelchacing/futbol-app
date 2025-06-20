@@ -1,0 +1,16 @@
+<div class="main-content">
+  <label for="pais">Selecciona un país:</label>
+  <select id="pais" (change)="onPaisChange($event)">
+    <option value="">-- Elige un país --</option>
+    <option *ngFor="let pais of paises()" [value]="pais.name">{{ pais.name }}</option>
+  </select>
+
+  <div *ngIf="ligas().length > 0">
+    <h3>Ligas en {{ paisSeleccionado() }}</h3>
+    <ul>
+      <li *ngFor="let liga of ligas()" style="cursor:pointer;" (click)="irAEquiposLiga(liga)">
+        {{ liga.league.name }}
+      </li>
+    </ul>
+  </div>
+</div> 

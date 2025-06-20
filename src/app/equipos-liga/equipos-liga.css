@@ -1,22 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-
-body {
-  background: #0a2342;
-  color: #fff;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main, .main-content {
+.main-content {
   background: rgba(20, 40, 80, 0.95);
   border-radius: 16px;
   padding: 2em 3em;
   box-shadow: 0 4px 24px rgba(0,0,0,0.3);
   text-align: center;
+  margin: 2em auto;
+  max-width: 500px;
 }
 
 label {
@@ -26,15 +15,11 @@ label {
 }
 
 select {
-  margin: 0.5em 0;
+  margin: 0.5em 0 1.5em 0;
   padding: 0.4em 1em;
   border-radius: 6px;
   border: none;
   font-size: 1em;
-}
-
-h3 {
-  margin-top: 1.5em;
 }
 
 ul {
@@ -49,4 +34,22 @@ li {
   padding: 0.7em 1em;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
 }
+
+button {
+  background: #17335c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #2051a2;
+} 
